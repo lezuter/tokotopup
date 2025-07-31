@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Kelola Game Card</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <a href="dashboard.html" class="back-link">&larr; Kembali ke Dashboard</a>
+        <h1>Kelola Konten Card</h1>
+        <div class="toolbar">
+            <div class="search-group">
+                <input type="text" id="searchName" placeholder="Cari by Nama...">
+            </div>
+            <button class="btn btn-primary" id="addGameBtn">Tambah Card Baru</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name Content</th>
+                        <th>Section</th>
+                        <th>Image Card</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="gameTableBody">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal untuk Tambah/Edit Game -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Tambah Card Baru</h2>
+            <form id="gameForm">
+                <input type="hidden" id="formMode" name="formMode" value="add">
+                <input type="hidden" id="originalCode" name="originalCode">
+                <input type="hidden" id="oldImage" name="oldImage">
+
+                <div class="form-group">
+                    <label for="name">Nama Game:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sectionSelect">Section:</label>
+                    <div class="section-wrapper">
+                        <select id="sectionSelect" name="section" required></select>
+                        <button type="button" id="addNewSectionBtn" class="btn-add-section">+</button>
+                    <div id="newSectionContainer" class="section-wrapper" style="display:none; margin-top: 10px;">
+                    <input type="text" id="newSectionInput" name="newSection" placeholder="Nama Section Baru...">
+                    <button type="button" id="commitSectionBtn" class="btn-add-section">+</button>
+                    </div>
+
+                <div class="form-group">
+                    <label for="imageFile">Upload Gambar:</label>
+                    <input type="file" id="imageFile" name="imageFile" accept="image/*">
+                    <p class="image-preview-text">Gambar saat ini: <span id="currentImage">Tidak ada</span></p>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/card.js"></script>
+</body>
+</html>

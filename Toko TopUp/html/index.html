@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Vibes Addicted - Top Up Game</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Goldman&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="loading" class="loading">
+    <video autoplay loop muted playsinline>
+      <source src="http://localhost:3001/images/logo/loading.webm" type="video/webm" />
+    </video>
+  </div>
+
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="left-nav">
+          <button class="hamburger">☰</button>
+          <div class="logo">
+            <img src="http://localhost:3001/images/logo/anggijajan.png" alt="logo">
+          </div>
+        </div>
+      <div class="right-nav">
+        <input type="text" placeholder="Cari game..." class="search-input" id="searchInput">
+        <div class="search">
+          <img src="http://localhost:3001/images/icon/search.png" alt="Search" class="search-icon" id="searchIcon">
+        </div>
+        <div class="profile">
+          <img src="http://localhost:3001/images/icon/avatar.png" alt="Profile">
+        </div>
+      </div>
+    </div> 
+    <nav class="sidebar" id="sidebar">
+      <div class="close-btn">
+        <img src="http://localhost:3001/images/icon/close.png" alt="Tutup" style="width: 24px;">
+      </div>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/home.png" class="sidebar-icon"><span>Beranda</span></a>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/hot-sale.png" class="sidebar-icon"><span>Promo & Berita</span></a>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/price-tag.png" class="sidebar-icon"><span>Daftar Harga</span></a>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/coupon.png" class="sidebar-icon"><span>Tukar Kupon</span></a>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/point.png" class="sidebar-icon"><span>Tukar Poin</span></a>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/avatar.png" class="sidebar-icon"><span>Hubungi Kami</span></a>
+      <a href="#" class="sidebar-link"><img src="http://localhost:3001/images/icon/info.png" class="sidebar-icon"><span>Tentang Kami</span></a>
+    </nav>
+  </header> 
+
+  <main>
+    <section class="banner">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="http://localhost:3001/images/carousel/Carousel_PUBGM_18052025.jpg" class="carousel-image" />
+            <img src="http://localhost:3001/images/carousel/Carousel_PUBGM_18052025.jpg" class="carousel-image" />
+            <img src="http://localhost:3001/images/carousel/Carousel_PUBGM_18052025.jpg" class="carousel-image" />
+          </div>
+          <button class="carousel-btn prev"><img src="http://localhost:3001/images/icon/arrowleft.png" alt="prev"></button>
+          <button class="carousel-btn next"><img src="http://localhost:3001/images/icon/arrowright.png" alt="next"></button>
+          <div class="carousel-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Mad Vibes Addicted. All rights reserved.
+  </footer>
+
+  <div id="cookiePopup" class="cookie-popup">
+    <div class="cookie-content">
+      <img src="http://localhost:3001/images/icon/cookies.png" alt="Cookie Icon" class="cookie-img">
+      <p>Website ini menggunakan cookies untuk meningkatkan pengalaman pengguna.</p>
+    </div>
+    <button id="acceptCookie">Oke, saya setuju</button>
+  </div>  
+
+  <div id="sidebar-overlay"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
